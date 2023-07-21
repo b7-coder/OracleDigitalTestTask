@@ -11,6 +11,7 @@ postgresql выше 14 версии - https://www.postgresql.org/download/window
 ASP.NET Core Runtime 6 - https://dotnet.microsoft.com/en-us/download/dotnet/6.0
 
 
+
 Настройте TestTask\WebServiceProject\bin\Debug\net6.0\appsettings.json для подключения к вашей базе данных
 
 
