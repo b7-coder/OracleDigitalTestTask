@@ -3,16 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.3.32804.467
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebServiceProject", "WebServiceProject\WebServiceProject.csproj", "{1423CCD7-9B92-4891-BFDE-04CA069A379D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WebServiceProject", "WebServiceProject\WebServiceProject.csproj", "{1423CCD7-9B92-4891-BFDE-04CA069A379D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebServiceDomain", "WebServiceDomain\WebServiceDomain.csproj", "{2AFD9F24-4D51-432C-8C4B-1BFA78660642}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WebServiceDomain", "WebServiceDomain\WebServiceDomain.csproj", "{2AFD9F24-4D51-432C-8C4B-1BFA78660642}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebServiceEntityFramework", "WebServiceEntityFramework\WebServiceEntityFramework.csproj", "{7F0244D9-0AEF-4B86-9E5B-394B805E1DB1}"
-EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Элементы решения", "Элементы решения", "{1BB5CE56-7BF3-415D-AEC5-99AE7B896853}"
-	ProjectSection(SolutionItems) = preProject
-		Инструкция.txt = Инструкция.txt
-	EndProjectSection
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WebServiceEntityFramework", "WebServiceEntityFramework\WebServiceEntityFramework.csproj", "{7F0244D9-0AEF-4B86-9E5B-394B805E1DB1}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
