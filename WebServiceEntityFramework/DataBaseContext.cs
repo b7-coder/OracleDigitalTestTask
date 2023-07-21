@@ -18,11 +18,6 @@ public partial class DataBaseContext : DbContext
 
     public virtual DbSet<DataModel> DataModels { get; set; }
 
-    protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
-    {
-        optionsBuilder.UseNpgsql("Host=localhost;Port=5432;Database=jsondata;Username=postgres;Password=x0x0xaxaB");
-    }
-
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
         modelBuilder.Entity<DataModel>(entity =>
