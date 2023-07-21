@@ -5,11 +5,6 @@ namespace WebServiceEntityFramework;
 
 public partial class DataBaseContext : DbContext
 {
-    public DataBaseContext()
-    {
-        Database.EnsureCreated();
-    }
-
     public DataBaseContext(DbContextOptions<DataBaseContext> options)
         : base(options)
     {

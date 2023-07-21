@@ -13,7 +13,6 @@ namespace WebServiceProject
         {
             this.env = env;
             this.configuration = configuration;
-
         }
         public void ConfigureServices(IServiceCollection services)
         {
