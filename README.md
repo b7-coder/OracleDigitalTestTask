@@ -3,11 +3,10 @@
 Инструкция по запуску веб-сервиса
 
 Для запуска требуется версии системы Windows для .net 6 
+
 postgresql выше 14 версии - https://www.postgresql.org/download/windows/
 
-
 .net 6 runtime - https://dotnet.microsoft.com/en-us/download/dotnet/6.0
-
 
 ASP.NET Core Runtime 6 - https://dotnet.microsoft.com/en-us/download/dotnet/6.0
 
