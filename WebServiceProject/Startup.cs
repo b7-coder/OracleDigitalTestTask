@@ -1,5 +1,4 @@
 ﻿using System.Net;
-using WebServiceDomain.Models;
 
 namespace WebServiceProject
 {
@@ -11,7 +10,6 @@ namespace WebServiceProject
         {
             _env = env;
             StaticConfig = configuration;
-            DataModel js = new(); 
 
         }
         public void ConfigureServices(IServiceCollection services)

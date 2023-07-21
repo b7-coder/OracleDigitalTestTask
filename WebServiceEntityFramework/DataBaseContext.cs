@@ -1,26 +1,31 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using WebServiceDomain.Models;
 
-public partial class JsondataContext : DbContext
+namespace WebServiceEntityFramework;
+
+public partial class DataBaseContext : DbContext
 {
-    public JsondataContext()
+    public DataBaseContext()
     {
+        Database.EnsureCreated();
     }
 
-    public JsondataContext(DbContextOptions<JsondataContext> options)
+    public DataBaseContext(DbContextOptions<DataBaseContext> options)
         : base(options)
     {
+        Database.EnsureCreated();
     }
 
-    public virtual DbSet<Jsontable> Jsontables { get; set; }
+    public virtual DbSet<DataModel> DataModels { get; set; }
 
     protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
-#warning To protect potentially sensitive information in your connection string, you should move it out of source code. You can avoid scaffolding the connection string by using the Name= syntax to read it from configuration - see https://go.microsoft.com/fwlink/?linkid=2131148. For more guidance on storing connection strings, see http://go.microsoft.com/fwlink/?LinkId=723263.
-        => optionsBuilder.UseNpgsql("Host=localhost;Port=5432;Database=jsondata;Username=postgres;Password=x0x0xaxaB");
+    {
+        optionsBuilder.UseNpgsql("Host=localhost;Port=5432;Database=jsondata;Username=postgres;Password=x0x0xaxaB");
+    }
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
-        modelBuilder.Entity<Jsontable>(entity =>
+        modelBuilder.Entity<DataModel>(entity =>
         {
             entity.HasKey(e => e.Id).HasName("jsontable_pkey");
 

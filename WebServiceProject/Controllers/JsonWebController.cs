@@ -5,23 +5,25 @@ using System.Text.Json;
 
 namespace WebServiceProject.Controllers
 {
+    [ApiController]
+    [Route("api/[controller]")]
     public class JsonWebController : ControllerBase
     {
-        private readonly ILogger<WeatherForecastController> _logger;
-        private readonly HttpClient _httpClient;
+        private readonly ILogger<JsonWebController> logger;
+        private readonly HttpClient httpClient;
 
-        public JsonWebController(ILogger<WeatherForecastController> logger)
+        public JsonWebController(ILogger<JsonWebController> logger)
         {
-            _logger = logger;
-            _httpClient = new();
+            this.logger = logger;
+            this.httpClient = new();
         }
 
         [HttpPost]
-        public async Task<IActionResult> DownloadAndSaveData() 
+        public async Task<IActionResult> DownloadAndSaveData([FromBody] string apiUrl, [FromBody] string method) 
         {
-            string apiUrl = "https://example.com/api/data"; // Замените на URL API для скачивания JSON данных.
+            apiUrl = "https://example.com/api/data";
 
-            using (var response = await _httpClient.GetAsync(apiUrl))
+            using (var response = await httpClient.GetAsync(apiUrl))
             {
                 if (response.IsSuccessStatusCode)
                 {

@@ -1,4 +1,6 @@
-﻿public partial class Jsontable
+﻿namespace WebServiceDomain.Models;
+
+public partial class DataModel
 {
     public int Id { get; set; }
 

@@ -1,12 +1,23 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using Microsoft.EntityFrameworkCore;
 
 namespace WebServiceEntityFramework
 {
-    internal class DataBaseContextFactory
+    public class DataBaseContextFactory
     {
+        private readonly Action<DbContextOptionsBuilder> _configureDbContext;
+
+        public DataBaseContextFactory(Action<DbContextOptionsBuilder> configureDbContext)
+        {
+            _configureDbContext = configureDbContext;
+        }
+
+        public DataBaseContext CreateDbContext()
+        {
+            DbContextOptionsBuilder<DataBaseContext> options = new DbContextOptionsBuilder<DataBaseContext>();
+
+            _configureDbContext(options);
+
+            return new DataBaseContext(options.Options);
+        }
     }
 }
